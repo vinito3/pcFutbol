@@ -49,8 +49,6 @@ impl ObjectImpl for Window {
             button.add_css_class("suggested-action");
             
         });
-        let image_path: Option<&str>  = "../../resources/img/prueba.png";
-        self.image2.set_from_resource(image_path);
     }
 }
 // ANCHOR_END: object_impl
