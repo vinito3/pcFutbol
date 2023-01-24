@@ -1,5 +1,4 @@
-mod imp;
-
+use imp;
 use glib::Object;
 use gtk::{gio, glib, Application};
 
