@@ -8,13 +8,11 @@ use gtk::{Application};
 
 fn main() {
 
-    resources::load_resources();
-
     // Create a new application
     let app = Application::builder().application_id(constantes::APP_ID).build();
 
     // Connect to "activate" signal of `app`
-    app.connect_startup(|_| resources::load_css());
+    app.connect_startup(|_| resources::load_resources());
     app.connect_activate(gui::build_ui);
 
     // Run the application

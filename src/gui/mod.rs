@@ -1,7 +1,9 @@
 pub mod window;
+pub mod imp;
+use gtk::prelude::GtkWindowExt;
+use window::Window;
 
-use glib::Object;
-use gtk::{gio, glib, Application};
+use gtk::{Application};
 
 pub fn build_ui(app: &Application) {
     // Create new window and present it

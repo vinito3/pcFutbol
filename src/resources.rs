@@ -3,12 +3,11 @@ use gdk::Display;
 
 pub fn load_resources(){
 
-    
-    
     // Register and include resources
     gio::resources_register_include!("pcfutbol.gresource")
         .expect("Failed to register resources.");
-
+    //load css files
+    load_css();
 }
 
 pub fn load_css() {
