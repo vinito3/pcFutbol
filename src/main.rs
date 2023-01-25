@@ -3,19 +3,14 @@ mod data;
 mod constantes;
 mod resources;
 
-use gtk::prelude::*;
-use gtk::{Application};
+use std::num::ParseIntError;
 
-fn main() {
+fn main() -> Result<(),ParseIntError> {
 
-    // Create a new application
-    let app = Application::builder().application_id(constantes::APP_ID).build();
+    data::start_db();
 
-    // Connect to "activate" signal of `app`
-    app.connect_startup(|_| resources::load_resources());
-    app.connect_activate(gui::build_ui);
+    gui::start_ui();
 
-    // Run the application
-    app.run();
+    Ok(())
 }
 
