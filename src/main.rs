@@ -2,15 +2,17 @@ mod gui;
 mod data;
 mod constantes;
 mod resources;
+mod utils;
 
-use std::num::ParseIntError;
+fn main() {
 
-fn main() -> Result<(),ParseIntError> {
+    match data::start_db() {
 
-    data::start_db();
+        Ok(msg) => println!("{}",msg),
+        Err(err) => println!("Error starting Db: {:?}",err),
+    }
 
     gui::start_ui();
 
-    Ok(())
 }
 
