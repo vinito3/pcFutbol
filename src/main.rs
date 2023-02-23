@@ -1,18 +1,12 @@
-mod gui;
-mod data;
-mod constantes;
-mod resources;
-mod utils;
+use utils::GenericError;
 
-fn main() {
+fn main() -> Result<(),GenericError> {
+    
+    db::serialization_db()?;
+    //db::start_db().await?;
 
-    match data::start_db() {
+    //gui::start_ui();
 
-        Ok(msg) => println!("{}",msg),
-        Err(err) => println!("Error starting Db: {:?}",err),
-    }
-
-    gui::start_ui();
-
+    Ok(())
 }
 
