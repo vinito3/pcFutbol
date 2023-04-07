@@ -4,7 +4,7 @@ mod resources;
 
 use gtk::prelude::GtkWindowExt;
 use window::Window;
-use gtk::{Application,glib::Error};
+use gtk::{Application};
 use gtk::prelude::*;
 use utils::GenericError;
 
