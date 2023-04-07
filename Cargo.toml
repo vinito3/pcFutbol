@@ -5,22 +5,19 @@ edition = "2021"
 
 [workspace]
 members = [
-	"crates/db",
-	"crates/gui",
 	"crates/utils",
+	"crates/angular_ui",
+	"crates/gtk_ui",
+	"crates/serialize_db",
+	"crates/sqllite_db",
 ]
 #exclude=["resources","crates/db/resources",]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-gui = { path = "./crates/gui", version = "0.1.0"  }
-db = { path = "./crates/db", version = "0.1.0"  }
-utils = { path = "./crates/utils", version = "0.1.0"  }
-gtk = { version = "0.6.0", package = "gtk4", features = ["v4_8"] }
-#sqlx = { version = "0.6.2", features = [  "runtime-async-std-native-tls", "sqlite" ] }
-#async-std = { version = "1.12.0", features = [ "attributes" ] }
-walkdir = {version="2.3.2"}
+utils = { path = "crates/utils", version = "0.1.0"  }
+gtk_ui = { path = "crates/gtk_ui", version = "0.1.0"  }
 
 
 [build-dependencies]
