@@ -20,6 +20,7 @@ utils = { path = "./crates/utils", version = "0.1.0"  }
 gtk = { version = "0.6.0", package = "gtk4", features = ["v4_8"] }
 #sqlx = { version = "0.6.2", features = [  "runtime-async-std-native-tls", "sqlite" ] }
 #async-std = { version = "1.12.0", features = [ "attributes" ] }
+walkdir = {version="2.3.2"}
 
 
 [build-dependencies]
