@@ -1,17 +1,19 @@
 use glib::subclass::InitializingObject;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
-use gtk::{glib, Button, CompositeTemplate,Image};
+use gtk::{glib, Button, CompositeTemplate,Entry,Box};
 
 // ANCHOR: object
 // Object holding the state
 #[derive(CompositeTemplate, Default)]
-#[template(resource = "/com/pcfutbol/resources/pcfutbol.ui")]
+#[template(file = "../../../resources/gui/pcfutbol.ui")]
 pub struct Window {
     #[template_child]
     pub main_button: TemplateChild<Button>,
     #[template_child]
-    pub image2: TemplateChild<Image>,
+    pub name_input: TemplateChild<Entry>,
+    #[template_child]
+    pub main_box: TemplateChild<Box>,
 }
 // ANCHOR_END: object
 
@@ -40,14 +42,12 @@ impl ObjectImpl for Window {
     fn constructed(&self) {
         // Call "constructed" on parent
         self.parent_constructed();
-
+        let name = self.name_input.to_owned();
         // Connect to "clicked" signal of `button`
         self.main_button.connect_clicked(move |button| {
-            // Set the label to "Hello World!" after the button has been clicked on
-            button.set_label("Hello World!");
-            button.remove_css_class("destructive-action");
-            button.add_css_class("suggested-action");
-            
+                        
+            button.set_label(&name.text());            
+               
         });
     }
 }

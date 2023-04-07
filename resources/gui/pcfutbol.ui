@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <template class="MainAppWindow" parent="GtkApplicationWindow">
+    <property name="title" translatable="yes">PcFutbol</property>
+    <property name="default-width">1800</property>
+    <property name="default-height">1700</property>
+    <property name="name">window-1</property>
+    <child>
+      <object class="GtkBox" id="main_box">
+        <property name="orientation">vertical</property>
+        <property name="hexpand">true</property>
+        <child>
+          <object class="GtkEntry" id="name_input">
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="main_button">
+            <property name="label" translatable="yes">Prueba</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="halign">start</property>
+            <property name="valign">end</property>
+            <property name="margin-start">500</property>
+            <property name="name">button-1</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

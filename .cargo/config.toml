@@ -1,0 +1,6 @@
+[env]
+# Set DATABASE_URL
+DATABASE_URL="sqlite://crates/db/resources/pcfutbol.db"
+OUT_DIR="./"
+RUST_BACKTRACE="full"
+PLAYER_DB_PATH="resources/db/players.db"
