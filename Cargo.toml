@@ -6,10 +6,10 @@ edition = "2021"
 [workspace]
 members = [
 	"crates/utils",
-	"crates/angular_ui",
 	"crates/gtk_ui",
 	"crates/serialize_db",
 	"crates/sqllite_db",
+	"crates/tauri_next_ui/src-tauri",
 ]
 #exclude=["resources","crates/db/resources",]
 
@@ -18,7 +18,8 @@ members = [
 [dependencies]
 utils = { path = "crates/utils", version = "0.1.0"  }
 gtk_ui = { path = "crates/gtk_ui", version = "0.1.0"  }
-
+sqllite_db = { path = "crates/sqllite_db", version = "0.1.0"  }
+serialize_db = { path = "crates/serialize_db", version = "0.1.0"  }
 
 [build-dependencies]
 glib-build-tools = "0.17.0"
