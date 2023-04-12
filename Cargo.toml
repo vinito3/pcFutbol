@@ -16,10 +16,10 @@ members = [
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-utils = { path = "crates/utils", version = "0.1.0"  }
-gtk_ui = { path = "crates/gtk_ui", version = "0.1.0"  }
-sqllite_db = { path = "crates/sqllite_db", version = "0.1.0"  }
-serialize_db = { path = "crates/serialize_db", version = "0.1.0"  }
+utils = {path = "crates/utils", version = "0.1.0"}
+tauri_next_ui = {path = "crates/tauri_next_ui/src-tauri", version = "0.1.0"}
+sqllite_db = {path = "crates/sqllite_db", version = "0.1.0"}
+tokio = { version = "1", features = ["full"]}
 
 [build-dependencies]
 glib-build-tools = "0.17.0"
